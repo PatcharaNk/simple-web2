@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:head>
+		<title>Insert Data</title>
+	</h:head>
+	<h:body>
+		<h1> Insert Your Data </h1>
+		<h:form>
+			<h:selectOneRadio value="#{userManagedBean.sex}">
+				<h:outputLabel value="Sex:" /> <br/>
+				<f:selectItem itemValue="m" itemLabel="male"/>
+				<f:selectItem itemValue="f" itemLabel="female"/>
+			</h:selectOneRadio><br/>
+			<h:outputLabel for = "firstname">First name: </h:outputLabel><br/>
+			<h:inputText id="firstname" value="#{userManagedBean.firstname}" /> 
+			<br/>
+			<h:outputLabel for = "lastname">Last name: </h:outputLabel><br/>
+			<h:inputText id="lastname" value="#{userManagedBean.lastname}" /> 
+			<br/>
+			<h:outputLabel for = "age">Age: </h:outputLabel><br/>
+			<h:inputText id="age" value="#{userManagedBean.age}" /> 
+			<br/>
+			<h:outputLabel for = "phone">Phone Number: </h:outputLabel><br/>
+			<h:inputText id="phone" value="#{userManagedBean.phone}" /> 
+			<br/>
+			<h:commandButton id="submit-button" value="Submit" action="#{userManagedBean.submit()}"/>
+		</h:form>
+	</h:body>
+</html>
