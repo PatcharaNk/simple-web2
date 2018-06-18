@@ -14,17 +14,17 @@ public class PersonsManager {
 	static EntityManagerFactory factory;
 	static EntityManager entityManager;
 	
-	public static void main(String[] arge) {
-		begin();
-		
-		//create();
-		//update();
-		//find();
-		query();
-		
-		end();
-		
-	}
+//	public static void main(String[] arge) {
+//		begin();
+//		
+//		//create();
+//		//update();
+//		//find();
+//		query();
+//		
+//		end();
+//		
+//	}
 
 	private static void end() {
 		entityManager.getTransaction().commit();

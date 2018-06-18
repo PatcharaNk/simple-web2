@@ -9,25 +9,35 @@
 	</h:head>
 	<h:body>
 		<h1> Insert Your Data </h1>
+		<hr/>
 		<h:form>
-			<h:selectOneRadio value="#{userManagedBean.sex}">
+			<h:selectOneRadio id="sex-radio" value="#{userManagedBean.sex}">
 				<h:outputLabel value="Sex:" /> <br/>
 				<f:selectItem itemValue="m" itemLabel="male"/>
 				<f:selectItem itemValue="f" itemLabel="female"/>
+				<h:message for="sex-radio" style="color:red" />
 			</h:selectOneRadio><br/>
 			<h:outputLabel for = "firstname">First name: </h:outputLabel><br/>
 			<h:inputText id="firstname" value="#{userManagedBean.firstname}" /> 
+			<h:message for="firstname" style="color:red" />
 			<br/>
 			<h:outputLabel for = "lastname">Last name: </h:outputLabel><br/>
 			<h:inputText id="lastname" value="#{userManagedBean.lastname}" /> 
+			<h:message for="lastname" style="color:red" />
 			<br/>
 			<h:outputLabel for = "age">Age: </h:outputLabel><br/>
 			<h:inputText id="age" value="#{userManagedBean.age}" /> 
+			<h:message for="age" style="color:red" />
 			<br/>
 			<h:outputLabel for = "phone">Phone Number: </h:outputLabel><br/>
 			<h:inputText id="phone" value="#{userManagedBean.phone}" /> 
+			<h:message for="phone" style="color:red" />
 			<br/>
 			<h:commandButton id="submit-button" value="Submit" action="#{userManagedBean.submit()}"/>
+			<br/>
 		</h:form>
+			
+			<h:link value="Home" outcome="/index.html"/>
+
 	</h:body>
 </html>
