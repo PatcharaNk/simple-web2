@@ -6,6 +6,8 @@ import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
 import javax.faces.view.ViewScoped;
@@ -13,6 +15,8 @@ import javax.inject.Named;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.mysql.cj.xdevapi.Statement;
 
 @Named
 @RequestScoped
@@ -106,5 +110,6 @@ public class UserManagedBean implements Serializable {
 			return "....";
 		}
 	}
+	
 	
 }

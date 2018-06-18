@@ -17,19 +17,15 @@
 			</h:selectOneRadio><br/>
 			<h:outputLabel for = "firstname">First name: </h:outputLabel><br/>
 			<h:inputText id="firstname" value="#{userManagedBean.firstname}" /> 
-			<h:outputText value="#{userManagedBean.firstname}" style="color: green"></h:outputText> 
 			<br/>
 			<h:outputLabel for = "lastname">Last name: </h:outputLabel><br/>
 			<h:inputText id="lastname" value="#{userManagedBean.lastname}" /> 
-			<h:outputText value="#{userManagedBean.lastname}" style="color: green"></h:outputText> 
 			<br/>
 			<h:outputLabel for = "age">Age: </h:outputLabel><br/>
 			<h:inputText id="age" value="#{userManagedBean.age}" /> 
-			<h:outputText value="#{userManagedBean.age}" style="color: green"></h:outputText>
 			<br/>
 			<h:outputLabel for = "phone">Phone Number: </h:outputLabel><br/>
 			<h:inputText id="phone" value="#{userManagedBean.phone}" /> 
-			<h:outputText value="#{userManagedBean.phone}" style="color: green"></h:outputText>
 			<br/>
 			<h:commandButton id="submit-button" value="Submit" action="#{userManagedBean.submit()}"/>
 		</h:form>
