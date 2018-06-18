@@ -1,10 +1,14 @@
 package com.simple.jpa;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import org.jboss.jandex.Main;
+
+import com.mysql.cj.Query;
 
 public class PersonsManager {
 	static EntityManagerFactory factory;
@@ -15,7 +19,8 @@ public class PersonsManager {
 		
 		//create();
 		//update();
-		find();
+		//find();
+		query();
 		
 		end();
 		
@@ -62,6 +67,18 @@ public class PersonsManager {
 		Person person = entityManager.find(Person.class, primaryKey);
 		
 		System.out.println(person.toString());
+	}
+	
+	private static void query() {
+		String jpql = "SELECT p FROM Person p";
+		javax.persistence.Query q = entityManager.createQuery(jpql);
+		
+		@SuppressWarnings("unchecked")
+		List<Person> listPersons = q.getResultList();
+		
+		for(Person p : listPersons) {
+			System.out.println(p.toString());
+		}
 	}
 
 }
